@@ -11,7 +11,7 @@ thought looked really cool, and what was within my ability to code without copyi
 pointillism from Daniel Shiffman on the Processing website, and I thought that this was going to be really easy. So, I wanted to push 
 myself to do more with my code and make it more complex. So, I got a suggestion to randomize different famous paintings in pointillism 
 while playing entertaining music as well. I thought that was a really fun thing to do, since I really like art and music. 
-<img src = "imgres.jpg"
+<img src = "imgres.jpg">
 
 <h2 Screenshots </h2>
 <img src = "ScreenShot1.png">
