@@ -15,6 +15,6 @@ while playing entertaining music as well. I thought that was a really fun thing 
 
 <h2> Screenshots </h2>
 <img src="http://i.imgur.com/Ut6vLHr.png" title="source: imgur.com" /></a>
-<img src = "ScreenShot2.png">
-<img src = "ScreenShot2.png">
+<img src="http://i.imgur.com/gbTlpIf.png" title="source: imgur.com" /></a>
+<img src="http://i.imgur.com/xFcL51Z.png" title="source: imgur.com" /></a>
  
