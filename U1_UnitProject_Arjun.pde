@@ -7,14 +7,14 @@
 /*This is a code of art which randomizes famous paintings in pointillsim while playing 
 famous music every time. All you just have to do is watch and enjoy.*/
 
-import ddf.minim.*;
+import ddf.minim.*; //audio variables
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
-int which[];
-int x;
+int which[]; 
+int x; //variables for all booleans
 int y;
 int x2;
 int y2;
@@ -28,33 +28,35 @@ int x6;
 int y6;
 int x7;
 int y7;
-PImage img;
+PImage img; //vairables for all images
 PImage img2;
 PImage img3;
 PImage img4;
 PImage img5;
 PImage img6;
 PImage img7;
-PImage[] images = {img, img2, img3, img4, img5, img6, img7};
-int smallPoint, largePoint;
-boolean fpm1 = false;
+PImage[] images = {img, img2, img3, img4, img5, img6, img7}; //array for images
+int smallPoint, largePoint; //changing size of points
+boolean fpm1 = false; //showing booleans
 boolean fpm2 = false;
 boolean fpm3 = false;
 boolean fpm4 = false;
 boolean fpm5 = false;
 boolean fpm6 = false;
 boolean fpm7 = false;
-AudioPlayer songs[] = new AudioPlayer[7];
+AudioPlayer songs[] = new AudioPlayer[7]; //audio for next two lines
 Minim minim;
+int pointillize = 10;
+int [] dots = new int[2];
 
 void setup()
 {
   fullScreen();
-  images[0] = loadImage("15CA.jpeg");
+  images[0] = loadImage("15CA.jpg"); //loading images
   images[1] = loadImage("16CA.jpg");
   images[2] = loadImage("20'sA.jpg");
   images[3] = loadImage("MorFreeA.jpg");
-  images[4] = loadImage("NowA.jpeg");
+  images[4] = loadImage("NowA.png");
   images[5] = loadImage("NowA2.jpg");
   images[6] = loadImage("NowA3.jpg");
   imageMode(CENTER);
@@ -62,29 +64,30 @@ void setup()
   smallPoint = 5;
   largePoint = 50;
   minim = new Minim(this);
-  songs[0] = minim.loadFile("15CM.mp3");
+  songs[0] = minim.loadFile("15CM.mp3"); //loading songs
   songs[1] = minim.loadFile("16CM.mp3");
   songs[2] = minim.loadFile("20'sM.mp3");
   songs[3] = minim.loadFile("MorFreeM.mp3");
   songs[4] = minim.loadFile("NowM.mp3");
   songs[5] = minim.loadFile("NowM2.mp3");
   songs[6] = minim.loadFile("NowM3.mp3");
+  smooth();
+  background(0);
 }
 
 void draw()
 {
-  background(255);
-  if(fpm1 == true)
+  if(fpm1 == true) // pointillizing the pictures with each fpm
   {
    for(int i = 0; i < 100; i++)
    {
     float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
     int x = int(random(images[0].width));
     int y = int(random(images[0].height));
-    color pix = img.get(x,y);
-    fill(pix, 128);
-    ellipse(images[0].width, images[0].height, pointillize, pointillize); 
-    songs[0].play();
+    color making = images[0].get(x  - 500 + 500,y);
+    fill(making,128);
+    ellipse(x, y, pointillize, pointillize);
+    songs[0].play();`
    }
   }
   
@@ -95,9 +98,9 @@ void draw()
     float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
     int x2 = int(random(images[1].width));
     int y2 = int(random(images[1].height));
-    color pix2 = img.get(x2,y2);
-    fill(pix2, 128);
-    ellipse(images[1].width, images[1].height, pointillize, pointillize); 
+    color making2 = images[1].get(x2,y2);
+    fill(making2, 128);
+    ellipse(x2, y2, pointillize, pointillize); 
     songs[1].play();
    }
   }
@@ -109,9 +112,9 @@ void draw()
     float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
     int x3 = int(random(images[2].width));
     int y3 = int(random(images[2].height));
-    color pix3 = img.get(x3,y3);
-    fill(pix3, 128);
-    ellipse(img3.width, img3.height, pointillize, pointillize); 
+    color making3 = images[2].get(x3,y3);
+    fill(making3, 128);
+    ellipse(x3, y3, pointillize, pointillize); 
     songs[2].play();
    }
   }  
@@ -123,9 +126,9 @@ void draw()
     float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
     int x4 = int(random(images[3].width));
     int y4 = int(random(images[3].height));
-    color pix4 = img.get(x4,y4);
-    fill(pix4, 128);
-    ellipse(img4.width, img4.height, pointillize, pointillize); 
+    color making4 = images[3].get(x4,y4);
+    fill(making4, 128);
+    ellipse(x4, y4, pointillize, pointillize); 
     songs[3].play();
    }
   }  
@@ -134,12 +137,12 @@ void draw()
   {
    for(int i = 0; i < 100; i++)
    {
-    float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
+    float pointillize = map(mouseX, 0, width + 500, smallPoint, largePoint);
     int x5 = int(random(images[4].width));
     int y5 = int(random(images[4].height));
-    color pix5 = img.get(x5,y5);
-    fill(pix5, 128);
-    ellipse(img5.width, img5.height, pointillize, pointillize); 
+    color making5 = images[4].get(x5,y5);
+    fill(making5, 128);
+    ellipse(x5, y5, pointillize, pointillize); 
     songs[4].play();
    }
   }  
@@ -151,9 +154,9 @@ void draw()
     float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
     int x6 = int(random(images[5].width));
     int y6 = int(random(images[5].height));
-    color pix6 = img.get(x6,y6);
-    fill(pix6, 128);
-    ellipse(img6.width, img6.height, pointillize, pointillize); 
+    color making6 = images[5].get(x6,y6);
+    fill(making6, 128);
+    ellipse(x6, y6, pointillize, pointillize); 
     songs[5].play();
    }
   }  
@@ -165,9 +168,9 @@ void draw()
     float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
     int x7 = int(random(images[6].width));
     int y7 = int(random(images[6].height));
-    color pix7 = img.get(x7,y7);
-    fill(pix7, 128);
-    ellipse(img7.width, img7.height, pointillize, pointillize); 
+    color making7 = images[6].get(x7,y7);
+    fill(making7, 128);
+    ellipse(x7, y7, pointillize, pointillize); 
     songs[6].play();
    }
   }  
@@ -175,7 +178,7 @@ void draw()
 
 void keyPressed()
 {
-if(keyPressed && key == '1')
+if(keyPressed && key == '1') //boolean to show when keyPressed
 {
   fpm1 = true;
 }
