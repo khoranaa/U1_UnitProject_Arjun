@@ -14,4 +14,4 @@ while playing entertaining music as well. I thought that was a really fun thing 
 <img src = "imgres.jpg"
 
 <h2> Screenshots </h2>
-<img src = ""
+<img src = "ScreenShot1.png">
