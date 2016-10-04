@@ -15,3 +15,5 @@ while playing entertaining music as well. I thought that was a really fun thing 
 
 <h2> Screenshots </h2>
 <img src = "ScreenShot1.png">
+<img src = "ScreenShot2.png">
+<img src = "ScreenShot2.png">
