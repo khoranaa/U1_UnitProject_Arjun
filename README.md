@@ -13,7 +13,7 @@ myself to do more with my code and make it more complex. So, I got a suggestion 
 while playing entertaining music as well. I thought that was a really fun thing to do, since I really like art and music. 
 <img src = "imgres.jpg">
 
-<h2 Screenshots </h2>
+<h2> Screenshots </h2>
 <img src = "ScreenShot1.png">
 <img src = "ScreenShot2.png">
 <img src = "ScreenShot2.png">
