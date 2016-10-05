@@ -1,5 +1,5 @@
 # U1_UnitProject_Arjun
-Pontillism of Famous Art While Playing Songs
+Famous Pointillism w/ Music
 
 <h2> Description </h2>
 <p> This project is a pointillistic version of famous artworks, while playing songs from the same era of art. When you press the number keys 1-7, you can experience many paintings in the form of pointillism with music from the time period of the art playing. This is supposed to create an enjoyable experience for whoever uses it. I used arrays for each of the pictures and for the music as well. This is my first time using Minim as well.<p>
